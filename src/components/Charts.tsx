@@ -27,7 +27,7 @@ export function LineChart({ data, color = '#16a34a', height = 220, unit = 'kg', 
       ...d,
     }));
     return { points: vals, maxVal: max, minVal: min };
-  }, [data, chartW, chartH, goalLine]);
+  }, [data, chartW, chartH, goalLine, padding.left, padding.top]);
 
   if (data.length === 0) {
     return (

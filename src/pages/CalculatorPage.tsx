@@ -18,11 +18,12 @@ export function CalculatorPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const [transportMode, setTransportMode] = useState<keyof typeof TRANSPORT_OPTIONS[number]['value'] | any>('car');
+  const [transportMode, setTransportMode] =
+  useState<(typeof TRANSPORT_OPTIONS)[number]['value']>('car');
   const [transportKm, setTransportKm] = useState(10);
   const [electricityKwh, setElectricityKwh] = useState(8);
-  const [foodType, setFoodType] = useState<keyof typeof FOOD_OPTIONS[number]['value'] | any>('mixed');
-  const [wasteKg, setWasteKg] = useState(1);
+  const [foodType, setFoodType] =
+  useState<(typeof FOOD_OPTIONS)[number]['value']>('mixed');  const [wasteKg, setWasteKg] = useState(1);
   const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
